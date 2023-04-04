@@ -357,7 +357,6 @@ nav .icon-burger .line {
 }
 
 #service {
-    height: 100vh;
     padding: 30px 0;
 }
 
@@ -610,23 +609,7 @@ form .btn2 {
     background-clip: content-box;
 }
 
-
-@media screen and (max-width: 991px) {
-    .hero {
-        margin-top: 30%;
-    }
-
-    #portfolio {
-        margin-top: 20%;
-    }
-
-    .col-0,
-    .col {
-        flex-basis: 100%;
-    }
-}
-
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 600px) {
     nav .logo {
         float: none;
         width: auto;
@@ -687,15 +670,11 @@ form .btn2 {
 
     .sub-title {
         font-size: 40px;
-        margin-top: 10%;
+        margin-top: 10% ;
     }
 
     #service{
-        margin-top: 30vh;
-    }
-
-    #portfolio {
-        margin-top: 80vh;
+        margin-top: 30%;
     }
 
     .col-0,
@@ -726,4 +705,17 @@ form .btn2 {
     }
 }
 
+@media screen and (max-width: 991px) {
+    .hero {
+        margin-top: 30%;
+    }
 
+    #portfolio {
+        margin-top: 20%;
+    }
+
+    .col-0,
+    .col {
+        flex-basis: 100%;
+    }
+}
