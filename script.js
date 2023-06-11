@@ -6,7 +6,7 @@ window.addEventListener("scroll", function () {
     navbar.style.backgroundColor = "";
   }
 });
-// 
+
 var tablinks = document.getElementsByClassName('tab-links');
 var tabcontents = document.getElementsByClassName('tab-contents');
 
@@ -21,7 +21,7 @@ function opentab(tabname) {
   event.currentTarget.classList.add('active-link');
   document.getElementById(tabname).classList.add('active-tab')
 }
-// 
+
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwUrzt_KtK27UusAbKooQ8AtGgR__ufk4UlCi5HVJfFZz-DSe8CSVqNlcIZLhNBj0rXAQ/exec'
 const form = document.forms['submit-to-google-sheet']
 const msg = document.getElementById('msg')
@@ -39,19 +39,33 @@ form.addEventListener('submit', e => {
     .catch(error => console.error('Error!', error.message))
 })
 
-////Page Load
+// Scroll to section when a link is clicked
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+
+// Page Load
 let stage = document.querySelector(".stage")
 let content = document.querySelector(".content")
 window.addEventListener("load", () => {
-    stage.style.opacity = "1";
+  stage.style.opacity = "1";
+  setTimeout(() => {
+    stage.style.opacity = "0";
     setTimeout(() => {
-        stage.style.opacity = "0";
-        setTimeout(() => {
-            content.style.opacity = "0";
-            setTimeout(() => {
-              content.style.display = "none";
-              window.scrollTo(0,0)
-            }, 600)
-        }, 500)
-    }, 4500)
-})
+      content.style.opacity = "0";
+      setTimeout(() => {
+        content.style.display = "none";
+        window.scrollTo(0, 0)
+      }, 600)
+    }, 500)
+  }, 4500)
+});
