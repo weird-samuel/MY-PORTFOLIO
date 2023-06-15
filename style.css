@@ -86,6 +86,7 @@
     z-index: 20;
     transition: 0.5s;
 }
+
 .stage {
     position: absolute;
     top: 50%;
@@ -99,6 +100,7 @@
     opacity: 0;
     transition: 0.5s;
 }
+
 .dot-floating,
 .dot-floating-shadow,
 .dot-floating-shadow-faded {
@@ -110,13 +112,16 @@
     border-radius: 5px;
     animation: roll 2.5s infinite linear;
 }
+
 .dot-floating {
     background-color: #555;
 }
+
 .dot-floating-shadow {
     background-color: rgba(85, 85, 85, 0.7);
     animation-delay: 0.1s;
 }
+
 .dot-floating-shadow-faded {
     background-color: rgba(85, 85, 85, 0.4);
     animation-delay: 0.2s;
@@ -127,22 +132,30 @@
     0% {
         transform: translate(10px, 0) rotate(0deg);
     }
+
     20% {
         transform: translate(30px, -6px) rotate(45deg);
     }
-    30%, 40% {
+
+    30%,
+    40% {
         transform: translate(50px, 0) rotate(90deg);
     }
+
     50% {
         transform: translate(70px, -6px) rotate(135deg);
     }
-    70%,80% {
+
+    70%,
+    80% {
         transform: translate(90px, 0) rotate(180deg);
     }
-    90%,100% {
+
+    90%,
+    100% {
         transform: translate(10px, 0) rotate(180deg);
     }
- }
+}
 
 nav {
     position: fixed;
@@ -401,7 +414,9 @@ nav .icon-burger .line {
 }
 
 #portfolio {
-    padding: 50px 0;
+    height: 80vh;
+    padding-top: 90px;
+    margin-bottom: 100px;
 }
 
 .work-list {
@@ -499,11 +514,11 @@ nav .icon-burger .line {
     text-decoration: none;
     color: white;
     filter: blur(0.4px);
-  -webkit-filter: blur(0.4px);
-  transition: 0.5s;
+    -webkit-filter: blur(0.4px);
+    transition: 0.5s;
 }
 
-.btns:hover{
+.btns:hover {
     background: #262626;
 }
 
@@ -587,9 +602,9 @@ form .btn2 {
     display: block;
 }
 
-
-
-
+p {
+    font-size: 15px;
+}
 
 /* scrollbar-custom */
 ::-webkit-scrollbar {
@@ -611,7 +626,27 @@ form .btn2 {
     background-clip: content-box;
 }
 
+/* flickity */
+
+.carousel-cell {
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+.carousel-cell img {
+    display: block;
+    height: 400px;
+}
+
 @media screen and (max-width: 768px) {
+    .carousel-cell img {
+        height: 400px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
     .hero {
         margin-top: -40%;
         height: max-content;
@@ -679,7 +714,7 @@ form .btn2 {
         font-size: 40px;
     }
 
-    #service{
+    #service {
         padding: 30% 0%;
         padding-bottom: 0;
     }
