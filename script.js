@@ -80,7 +80,11 @@ var flkty = new Flickity(elem, {
 var carousel = document.querySelector('.carousel');
 var flkty = new Flickity(carousel, {
   imagesLoaded: true,
-  percentPosition: false,
+  lazyLoad: true,
+  autoPlay: true,
+  pauseAutoPlayOnHover: false,
+  percentPosition: true,
+  pageDots: false,
 });
 
 var imgs = carousel.querySelectorAll('.carousel-cell img');

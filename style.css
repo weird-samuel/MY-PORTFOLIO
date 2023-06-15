@@ -272,6 +272,11 @@ nav .icon-burger .line {
     padding: 10px 10%;
 }
 
+.contain {
+    padding: 10px 10%;
+    margin-bottom: 5vh;
+}
+
 .hero {
     height: 100vh;
 }
@@ -292,9 +297,10 @@ nav .icon-burger .line {
 }
 
 #about {
-    padding: 80px o;
+    padding-top: 10vh;
+    margin-bottom: -10vh;
     color: #ababab;
-    height: 80vh;
+    height: 100vh;
 }
 
 .row {
@@ -414,78 +420,9 @@ nav .icon-burger .line {
 }
 
 #portfolio {
-    height: 80vh;
-    padding-top: 90px;
+    height: 100vh;
+    padding-top: 100px;
     margin-bottom: 100px;
-}
-
-.work-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
-}
-
-.work {
-    border-radius: 14px;
-    position: relative;
-    overflow: hidden;
-}
-
-.work img {
-    width: 100%;
-    height: 100%;
-    border-radius: 14px;
-    display: block;
-    transition: 0.5s;
-}
-
-.layer {
-    width: 100%;
-    height: 0%;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), var(--vargreen));
-    border-radius: 14px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
-    text-align: center;
-    font-size: 14px;
-}
-
-.layer h3 {
-    font-weight: 500;
-    margin-bottom: 20px;
-}
-
-.layer a {
-    margin-top: 20px;
-    color: var(--vargreen);
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 60px;
-    background-color: #fff;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-align: center;
-}
-
-.work:hover img {
-    transform: scale(1.1);
-}
-
-.work:hover .layer {
-    transition: 0.7s ease-out;
-}
-
-.work:hover .layer {
-    height: 100%;
 }
 
 .btn {
@@ -635,12 +572,13 @@ p {
 
 .carousel-cell img {
     display: block;
-    height: 400px;
+    height: 300px;
+    border-radius: 20px;
 }
 
 @media screen and (max-width: 768px) {
     .carousel-cell img {
-        height: 400px;
+        height: 200px;
     }
 
     p {
