@@ -9,6 +9,7 @@
     --vargreen: #1FAB71;
 }
 
+
 /* .center{
     display: flex;
     text-align: center;
@@ -94,12 +95,103 @@
     transform: translate(-50%, -50%);
     width: 140px;
     height: 70px;
-    border-bottom: 2px solid #555;
-    border-radius: 3px;
+    /* border-bottom: 2px solid #555; */
+    /* border-radius: 3px; */
     overflow: hidden;
     opacity: 0;
     transition: 0.5s;
 }
+
+.stage {
+    position: relative;
+    width: 54px;
+    height: 54px;
+    border-radius: 10px;
+}
+
+.stage div {
+    width: 8%;
+    height: 24%;
+    background: rgb(128, 128, 128);
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    opacity: 0;
+    border-radius: 50px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    animation: fade458 1s linear infinite;
+}
+
+@keyframes fade458 {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.25;
+    }
+}
+
+.stage .bar1 {
+    transform: rotate(0deg) translate(0, -130%);
+    animation-delay: 0s;
+}
+
+.stage .bar2 {
+    transform: rotate(30deg) translate(0, -130%);
+    animation-delay: -1.1s;
+}
+
+.stage .bar3 {
+    transform: rotate(60deg) translate(0, -130%);
+    animation-delay: -1s;
+}
+
+.stage .bar4 {
+    transform: rotate(90deg) translate(0, -130%);
+    animation-delay: -0.9s;
+}
+
+.stage .bar5 {
+    transform: rotate(120deg) translate(0, -130%);
+    animation-delay: -0.8s;
+}
+
+.stage .bar6 {
+    transform: rotate(150deg) translate(0, -130%);
+    animation-delay: -0.7s;
+}
+
+.stage .bar7 {
+    transform: rotate(180deg) translate(0, -130%);
+    animation-delay: -0.6s;
+}
+
+.stage .bar8 {
+    transform: rotate(210deg) translate(0, -130%);
+    animation-delay: -0.5s;
+}
+
+.stage .bar9 {
+    transform: rotate(240deg) translate(0, -130%);
+    animation-delay: -0.4s;
+}
+
+.stage .bar10 {
+    transform: rotate(270deg) translate(0, -130%);
+    animation-delay: -0.3s;
+}
+
+.stage .bar11 {
+    transform: rotate(300deg) translate(0, -130%);
+    animation-delay: -0.2s;
+}
+
+.stage .bar12 {
+    transform: rotate(330deg) translate(0, -130%);
+    animation-delay: -0.1s;
+}
+
 
 .dot-floating,
 .dot-floating-shadow,
@@ -577,6 +669,14 @@ p {
 }
 
 @media screen and (max-width: 768px) {
+    #portfolio {
+        margin-bottom: 0;
+    }
+
+    #about {
+        padding-top: 0;
+    }
+
     .carousel-cell img {
         height: 200px;
     }
@@ -588,6 +688,7 @@ p {
     .hero {
         margin-top: -40%;
         height: max-content;
+        margin-bottom: -15vh;
     }
 
     nav .logo {
