@@ -688,7 +688,7 @@ p {
     .hero {
         margin-top: -40%;
         height: max-content;
-        margin-bottom: -5vh;
+        margin-bottom: 5vh;
     }
 
     nav .logo {
